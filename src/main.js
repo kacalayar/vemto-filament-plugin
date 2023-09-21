@@ -52,7 +52,7 @@ module.exports = (vemto) => {
                 return packages
             }
             
-            packages.require['filament/filament'] = '^2.0'
+            packages.require['filament/filament'] = '^3.0'
 
             return packages
         },
@@ -66,7 +66,7 @@ module.exports = (vemto) => {
                 phpVersion = phpVersionBuffer.toString()
 
             if(vemto.versionIsSmallerThan(phpVersion, '8.0.0')) {
-                vemto.log.error('[FILAMENT ERROR] You have a smaller PHP version than required to use the Filament v2 (>= 8.0)')
+                vemto.log.error('[FILAMENT ERROR] You have a smaller PHP version than required to use the Filament v3 (>= 8.0)')
                 vemto.generator.abort()
             }
             
